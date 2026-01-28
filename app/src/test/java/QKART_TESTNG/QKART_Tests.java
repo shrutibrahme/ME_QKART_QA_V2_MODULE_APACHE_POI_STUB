@@ -261,7 +261,7 @@ public class QKART_Tests {
         checkoutPage.placeOrder();
 
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.urlToBe("https://crio-qkart-frontend-qa.vercel.app/thanks"));
+        wait.until(ExpectedConditions.urlToBe("https://qkart-qa-web.labs.crio.do/thanks"));
 
         // Check if placing order redirected to the Thanks page
         status = driver.getCurrentUrl().endsWith("/thanks");
@@ -325,7 +325,7 @@ public class QKART_Tests {
 
         try {
             WebDriverWait wait = new WebDriverWait(driver, 30);
-            wait.until(ExpectedConditions.urlToBe("https://crio-qkart-frontend-qa.vercel.app/thanks"));
+            wait.until(ExpectedConditions.urlToBe("https://qkart-qa-web.labs.crio.do/thanks"));
         } catch (TimeoutException e) {
             assertTrue(false, "Error while placing order: " + e.getMessage());
         }
